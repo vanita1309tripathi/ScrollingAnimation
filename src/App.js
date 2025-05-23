@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import Section from './Section';
+import TransitionVideoSection from './TransitionVideoSection';
 import './App.css';
 
-function App() {
+const App = () => {
+  const firstVideo = 'https://www.w3schools.com/howto/rain.mp4';
+  const transitionVideo = 'videos/forest.mp4';
+  const secondBgImage = 'https://picsum.photos/id/1015/1920/1080';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Section videoSrc={firstVideo}>
+        <h1>Welcome to Our Studio</h1>
+      </Section>
+
+      <TransitionVideoSection videoSrc="videos/sky.mp4" />
+
+      <Section videoSrc="videos/sky2.mp4">
+        <h1>About Us</h1>
+        <p>We create beautiful, immersive experiences.</p>
+      </Section>
+
+      <TransitionVideoSection videoSrc={transitionVideo} />
+      <Section bgImage={secondBgImage}>
+        <h1>Third Section</h1>
+        <p>We create beautiful, immersive experiences.</p>
+      </Section>
+    </>
   );
-}
+};
 
 export default App;
