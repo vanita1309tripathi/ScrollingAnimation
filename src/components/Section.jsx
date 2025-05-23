@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import './Section.css';
+import '../styles/Section.css';
 
 const Section = ({ children, videoSrc, bgImage }) => {
   const ref = useRef();

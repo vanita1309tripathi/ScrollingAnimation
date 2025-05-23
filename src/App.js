@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from './Section';
-import TransitionVideoSection from './TransitionVideoSection';
+import Section from './components/Section';
+import TransitionVideoSection from './components/TransitionVideoSection';
 import './App.css';
 
 const App = () => {

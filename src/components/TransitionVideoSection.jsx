@@ -1,5 +1,5 @@
 import React from 'react';
-import './TransitionVideo.css';
+import '../styles/TransitionVideo.css';
 
 const TransitionVideoSection = ({ videoSrc }) => {
   return (
