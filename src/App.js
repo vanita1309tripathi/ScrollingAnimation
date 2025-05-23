@@ -6,7 +6,7 @@ import './App.css';
 const App = () => {
   const firstVideo = 'https://www.w3schools.com/howto/rain.mp4';
   const transitionVideo = 'videos/forest.mp4';
-  const secondBgImage = 'https://picsum.photos/id/1015/1920/1080';
+
 
   return (
     <>
@@ -22,9 +22,9 @@ const App = () => {
       </Section>
 
       <TransitionVideoSection videoSrc={transitionVideo} />
-      <Section bgImage={secondBgImage}>
+      <Section bgImage='https://picsum.photos/id/1015/1920/1080'>
         <h1>Third Section</h1>
-        <p>We create beautiful, immersive experiences.</p>
+        <p>Keep Visiting for more information .</p>
       </Section>
     </>
   );
