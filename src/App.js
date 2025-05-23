@@ -16,7 +16,7 @@ const App = () => {
 
       <TransitionVideoSection videoSrc="videos/sky.mp4" />
 
-      <Section videoSrc="videos/sky2.mp4">
+      <Section videoSrc="videos/sky2.mp4" rotateRange={[-15, 0, 25]}>
         <h1>About Us</h1>
         <p>We create beautiful, immersive experiences.</p>
       </Section>

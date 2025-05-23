@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import '../styles/Section.css';
 
-const Section = ({ children, videoSrc, bgImage }) => {
+const Section = ({ children, videoSrc, bgImage,rotateRange = [10, 0, -50] }) => {
   const ref = useRef();
 
   // Scroll progress for this section only
@@ -13,7 +13,7 @@ const Section = ({ children, videoSrc, bgImage }) => {
 
   // Animate only while in viewport
 
-  const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [10, 0, -50]);
+  const rotate = useTransform(scrollYProgress, [0, 0.5, 1], rotateRange);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
 
   return (
